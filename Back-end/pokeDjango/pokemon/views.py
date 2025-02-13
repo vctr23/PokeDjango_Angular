@@ -10,7 +10,7 @@ class PokemonCardList(APIView):
     def get(self, request):
         url = "https://api.pokemontcg.io/v2/cards"
         headers = {
-            "X-Api-Key": "TU_API_KEY"
+            "X-Api-Key": "18aca43d-42e6-4870-8dd9-0e15e6a6fd1b"
         }
         response = requests.get(url, headers=headers)
         
