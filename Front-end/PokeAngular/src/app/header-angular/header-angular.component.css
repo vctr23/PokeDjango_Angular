@@ -1,0 +1,91 @@
+/* Importación de la fuente Lato */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+
+/* Reset de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Estilo para el Header y Navbar */
+header {
+    background: #000000; /* Fondo negro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Imagen de la Poké Ball a la izquierda */
+.pokeball-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    margin-right: 15px; /* Separación con los enlaces */
+}
+
+.pokeball-icon:hover {
+    transform: rotate(20deg) scale(1.1);
+}
+
+/* Enlaces de navegación */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding-left: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff; /* Letras blancas */
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.nav-links a:hover {
+    color: #000000;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+/* Icono de Log-in a la derecha */
+.login-icon {
+    fill: #ffffff;
+    height: 25px;
+    width: auto;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.login-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Ajuste general para la barra de navegación */
+.navbar {
+    gap: 10px;
+}
