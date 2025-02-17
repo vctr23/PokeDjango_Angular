@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'rest_framework',
     # Nuestras apps: 
     'api',
-    'pokemon'
+    'pokemon',
+    'pokemonSet'
 ]
 
 MIDDLEWARE = [
