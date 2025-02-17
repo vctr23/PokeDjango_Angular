@@ -1,0 +1,28 @@
+.logo-container {
+  display: flex;
+  flex-direction: column; /* Esto asegura que los elementos se apilen verticalmente */
+  align-items: center; /* Centra las imágenes horizontalmente */
+  padding: 20px;
+}
+
+.expansion-logo {
+  width: 100%;
+  max-width: 300px; /* Ajusta el tamaño máximo del logo */
+  height: auto;
+  margin-bottom: 20px; /* Espacio entre el logo y el sobre */
+}
+
+.booster-pack-image {
+  width: 100%;
+  max-width: 300px; /* Ajusta el tamaño máximo del sobre */
+  height: auto;
+  transition: 0.7s;
+}
+
+.booster-pack-image:hover {
+  transform: scale(
+    1.05
+  ); /* Aumenta el tamaño de la imagen al pasar el cursor */
+
+  transition: 0.7s;
+}
