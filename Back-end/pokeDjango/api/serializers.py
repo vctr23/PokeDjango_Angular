@@ -9,6 +9,6 @@ class PokemonCardSerializer(serializers.ModelSerializer):
         fields = '__all__'
         
 class PokemonSetSerializer(serializers.ModelSerializer):
-    class Beta:
+    class Meta:
         model = PokemonSet
         fields = '__all__'
