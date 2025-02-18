@@ -1,0 +1,10 @@
+.container_cards {
+  background-color: gray;
+  display: flex;
+  gap: 5px;
+}
+.card {
+  background-color: red;
+  height: 50px;
+  width: 50px;
+}

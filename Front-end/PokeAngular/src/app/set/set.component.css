@@ -3,7 +3,7 @@
 }
 
 .body {
-  background-image: url("../../../public/images/background.webp");
+  background-image: url("../../../public/images/banner-pokemon.jpg");
   background-size: cover;
 }
 
@@ -14,7 +14,6 @@
   /* Centra las imágenes horizontalmente */
   align-items: center;
   padding: 20px;
-  margin-top: 80px;
 }
 
 .expansion-logo {
