@@ -22,4 +22,3 @@ urlpatterns = [
     path('api/', include('pokemon.urls')),
     path('apiSets/', include('pokemonSet.urls')),
 ]
-

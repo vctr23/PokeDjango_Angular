@@ -9,8 +9,12 @@ class PokemonCardView(APIView):
         # URL de la API de Pokémon
         url = 'https://api.pokemontcg.io/v2/cards'
         headers = {
-            'Authorization': 'Bearer <tu_token_de_autorizacion>'  # Reemplaza con tu token si es necesario
+             "X-Api-Key": "18aca43d-42e6-4870-8dd9-0e15e6a6fd1b"  
         }
+
+        processed_cards = []  # Lista para almacenar los datos procesados
+        # page = 4   # Hay varias paginas en la api 
+        # page_size = 250  # Por cada página solo hay 250 cartas
 
         # Obtener los datos desde la API externa
         response = requests.get(url, headers=headers)
@@ -19,7 +23,7 @@ class PokemonCardView(APIView):
             return Response({'error': 'Error al obtener datos de la API externa'}, status=status.HTTP_400_BAD_REQUEST)
 
         data = response.json()
-        processed_cards = []  # Lista para almacenar los datos procesados
+        
 
         # Iterar sobre los datos obtenidos
         for card_data in data.get('data', []):
@@ -70,4 +74,3 @@ class PokemonCardView(APIView):
 
         # Retornar los datos procesados
         return Response({'cards': processed_cards}, status=status.HTTP_200_OK)
-
