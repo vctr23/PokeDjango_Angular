@@ -9,11 +9,8 @@ from api.serializers import PokemonSet1Serializer
 class PokemonSet1View(APIView):
     def get(self, request):
         url = "https://api.pokemontcg.io/v2/cards?q=set.id:sv3pt5&select=id,name,supertype,number,rarity,images&orderBy=number&18aca43d-42e6-4870-8dd9-0e15e6a6fd1b"
-        headers = {
-            "X-Api-Key": "18aca43d-42e6-4870-8dd9-0e15e6a6fd1b"
-        }
-
-        response = requests.get(url, headers=headers)
+    
+        response = requests.get(url)
 
         if response.status_code == 200:
             data = response.json()["data"]

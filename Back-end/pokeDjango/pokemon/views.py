@@ -17,7 +17,7 @@ class PokemonCardView(APIView):
         # page_size = 250  # Por cada página solo hay 250 cartas
 
         # Obtener los datos desde la API externa
-        response = requests.get(url, headers=headers)
+        response = requests.get(url, headers=headers, params={'page': 4, 'pageSize': 250})
 
         if response.status_code != 200:
             return Response({'error': 'Error al obtener datos de la API externa'}, status=status.HTTP_400_BAD_REQUEST)
