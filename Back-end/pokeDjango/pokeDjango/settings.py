@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     # Nuestras apps: 
     'api',
     'pokemon',
-    'pokemonSet'
+    'pokemonSet',
+    'set1',
 ]
 
 MIDDLEWARE = [
