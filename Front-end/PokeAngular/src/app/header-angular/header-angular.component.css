@@ -19,22 +19,27 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 10px 20px;
   width: 100%;
-  z-index: 1000;
+  height: 70px;
+  display: flex;
+  align-items: center;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  padding: 0 1rem;
+  gap: 10px;
 }
 
 /* Imagen de la Poké Ball a la izquierda */
 .pokeball-icon {
+  border-radius: 100%;
   width: 30px;
   height: 30px;
   cursor: pointer;
-  transition: transform 0.3s;
-  margin-right: 15px; /* Separación con los enlaces */
+  transition: 0.3s;
 }
 
 .pokeball-icon:hover {
@@ -49,40 +54,26 @@ header {
   padding-left: 0;
 }
 
-.nav-links li {
-  display: inline;
-}
-
 .nav-links a {
   text-decoration: none;
   color: #ffffff; /* Letras blancas */
   font-size: 18px;
   padding: 5px 10px;
-  border-radius: 5px;
-  transition: background 0.3s, transform 0.3s;
+  transition: 0.1s ease-in-out;
 }
 
 .nav-links a:hover {
-  color: #000000;
-  background: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transform: scale(1.1);
+  border-bottom: 2px solid #ffffff;
 }
-
 /* Icono de Log-in a la derecha */
 .login-icon {
   fill: #ffffff;
   height: 25px;
   width: auto;
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: 0.3s;
 }
 
 .login-icon:hover {
   transform: scale(1.2);
-}
-
-/* Ajuste general para la barra de navegación */
-.navbar {
-  gap: 10px;
 }
