@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-carousel',
+  standalone: true,
   imports: [],
   templateUrl: './carousel.component.html',
   styleUrl: './carousel.component.css',
@@ -9,9 +10,11 @@ import { Component } from '@angular/core';
 export class CarouselComponent {
   //Creamos un array con nuestras imagenes a mostrar
   images = [
-    'https://realitygames.es/wp-content/uploads/2024/03/Pokemon-TCG-Booster-Box-Display-Temporal-Forces-36-Unidades-Ingles5.jpg',
-    'https://realitygames.es/wp-content/uploads/2024/03/Pokemon-TCG-Booster-Box-Display-Temporal-Forces-36-Unidades-Ingles3.jpg',
-    'https://realitygames.es/wp-content/uploads/2024/03/Pokemon-TCG-Booster-Box-Display-Temporal-Forces-36-Unidades-Ingles4.jpg',
+    'images/pack1.png',
+    'images/pack2.png',
+    'images/pack3.png',
+    'images/pack4.png',
+    'images/pack5.png',
   ];
   currentIndex = 0;
 
