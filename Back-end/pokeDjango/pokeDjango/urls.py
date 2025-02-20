@@ -25,4 +25,5 @@ urlpatterns = [
     path('apiSet2/', include('set2.urls')),
     path('apiSet3/', include('set3.urls')),
     path('apiSet4/', include('set4.urls')),
+    path('apiSet5/', include('set5.urls'))
 ]
