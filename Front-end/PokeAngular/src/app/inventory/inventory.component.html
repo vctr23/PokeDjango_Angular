@@ -1,5 +1,8 @@
-<div class="container_cards">
-  <div class="card" *ngFor="let card of cards">
-    <img [src]="card.imageUrl" alt="Carta de Set 1" />
+<div *ngFor="let card of cards">
+  <div class="card">
+    <h3>{{ card.name }}</h3>
+    <!-- Mostrar URL de la imagen para depuración -->
+    <img [src]="card.image" alt="{{ card.name }}" /> <!-- Imagen -->
+    <p>{{ card.rarity }} - #{{ card.number }}</p>
   </div>
 </div>

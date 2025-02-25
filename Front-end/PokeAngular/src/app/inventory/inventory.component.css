@@ -1,17 +1,25 @@
 .container_cards {
   background-color: gray;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 2rem;
-  padding: 2rem 10rem;
+  grid-template-rows: repeat(5, 1fr); /* 5 columnas en cada fila */
+  gap: 1rem; /* Espacio entre las cartas */
+  padding: 2rem;
   justify-content: center;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 100%;
 }
 
 .card {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   transition: transform 0.2s ease-in-out;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera para las cartas */
 }
 
 .card:hover {
@@ -19,29 +27,40 @@
 }
 
 .card img {
-  width: 80%;
+  max-width: 200px; /* Reduce el tamaño de la imagen */
   height: auto;
-  object-fit: cover; /* Ajusta la imagen sin deformarla */
-  border-radius: 8px; /* Esquinas redondeadas (opcional) */
+  object-fit: cover;
+  border-bottom: 1px solid #ddd; /* Línea de separación entre imagen y texto */
+}
+
+.card h3 {
+  font-size: 1rem;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.card p {
+  font-size: 0.8rem;
+  text-align: center;
 }
 
 @media (max-width: 1024px) {
   .container_cards {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas en pantallas más pequeñas */
     gap: 1rem;
   }
 }
 
 @media (max-width: 768px) {
   .container_cards {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas aún más pequeñas */
     gap: 1rem;
   }
 }
 
 @media (max-width: 468px) {
   .container_cards {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas muy pequeñas */
     gap: 1rem;
   }
 }

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceService } from '../services/service.service'; // Asegúrate de que la ruta es correcta
 import { CommonModule } from '@angular/common';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+
 @Component({
   selector: 'app-inventory',
   standalone: true,
@@ -9,10 +10,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   templateUrl: './inventory.component.html',
   styleUrls: ['./inventory.component.css'],
   providers: [ServiceService] // Agrega el servicio aquí si es standalone
-
 })
 export class InventoryComponent implements OnInit {
-  
+
   cards: any[] = []; // Array para almacenar las cartas
 
   constructor(private service: ServiceService) {}
@@ -25,6 +25,5 @@ export class InventoryComponent implements OnInit {
       console.error('Error al obtener las cartas:', error);
     });
   }
-  
-  
+
 }
