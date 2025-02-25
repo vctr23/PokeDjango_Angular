@@ -1,44 +1,81 @@
 <div class="registro-container">
-    <div class="formulario">
-      <h2>Registro de Entrenador</h2>
-      <form [formGroup]="registroForm" (ngSubmit)="registrar()">
-        <div class="form-group">
-          <label>Usuario:</label>
-          <input type="text" formControlName="usuario" class="input-field" />
-          <div class="error" *ngIf="registroForm.get('usuario')?.invalid && registroForm.get('usuario')?.touched">
-            <small>El usuario debe tener al menos 3 caracteres</small>
-          </div>
+  <div class="formulario">
+    <h2>Registro de Entrenador</h2>
+    <form [formGroup]="registroForm" (ngSubmit)="registrar()">
+      <div class="form-group">
+        <label>Nombre:</label>
+        <input type="text" formControlName="usuario" class="input-field" />
+        <div
+          class="error"
+          *ngIf="
+            registroForm.get('usuario')?.invalid &&
+            registroForm.get('usuario')?.touched
+          "
+        >
+          <small>El usuario debe tener al menos 3 caracteres</small>
         </div>
-  
-        <div class="form-group">
-          <label>Correo:</label>
-          <input type="email" formControlName="correo" class="input-field" />
-          <div class="error" *ngIf="registroForm.get('correo')?.invalid && registroForm.get('correo')?.touched">
-            <small>Ingrese un correo válido</small>
-          </div>
+      </div>
+
+      <div class="form-group">
+        <label>Correo electrónico:</label>
+        <input type="email" formControlName="correo" class="input-field" />
+        <div
+          class="error"
+          *ngIf="
+            registroForm.get('correo')?.invalid &&
+            registroForm.get('correo')?.touched
+          "
+        >
+          <small>Ingrese un correo válido</small>
         </div>
-  
-        <div class="form-group">
-          <label>Contraseña:</label>
-          <input type="password" formControlName="contraseña" class="input-field" />
-          <div class="error" *ngIf="registroForm.get('contraseña')?.invalid && registroForm.get('contraseña')?.touched">
-            <small>La contraseña debe tener al menos 6 caracteres</small>
-          </div>
+      </div>
+
+      <div class="form-group">
+        <label>Contraseña:</label>
+        <input
+          type="password"
+          formControlName="contraseña"
+          class="input-field"
+        />
+        <div
+          class="error"
+          *ngIf="
+            registroForm.get('contraseña')?.invalid &&
+            registroForm.get('contraseña')?.touched
+          "
+        >
+          <small>La contraseña debe tener al menos 6 caracteres</small>
         </div>
-  
-        <div class="form-group">
-          <label>Confirmar contraseña:</label>
-          <input type="password" formControlName="confirmarContraseña" class="input-field" />
-          <div class="error" *ngIf="registroForm.hasError('noCoincide') && registroForm.get('confirmarContraseña')?.touched">
-            <small>Las contraseñas no coinciden</small>
-          </div>
+      </div>
+
+      <div class="form-group">
+        <label>Confirmar contraseña:</label>
+        <input
+          type="password"
+          formControlName="confirmarContraseña"
+          class="input-field"
+        />
+        <div
+          class="error"
+          *ngIf="
+            registroForm.hasError('noCoincide') &&
+            registroForm.get('confirmarContraseña')?.touched
+          "
+        >
+          <small>Las contraseñas no coinciden</small>
         </div>
-  
-        <a href="http://localhost:4200/login" id="regis">¿Ya tienes cuenta? Inicia sesión aquí</a>
-        <button type="submit" [disabled]="registroForm.invalid" class="btn-registrar">
-          Registrarse
-        </button>
-      </form>
-    </div>
+      </div>
+      <p>
+        ¿Ya tienes cuenta?
+        <a href="http://localhost:4200/login" id="regis"> Iniciar sesión</a>
+      </p>
+      <button
+        type="submit"
+        [disabled]="registroForm.invalid"
+        class="btn-registrar"
+      >
+        Registrarse
+      </button>
+    </form>
+  </div>
 </div>
-  
