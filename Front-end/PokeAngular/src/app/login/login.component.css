@@ -1,88 +1,86 @@
 #cuerpo {
-    background-image: url("../../../public/images/eevee.webp");
-    background-size: cover;
-    background-attachment: fixed;
-    /* aspect-ratio: 16/9; */
-    padding: 155px;
+  background-image: url("../../../public/images/eevee.webp");
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 155px;
 }
 
 .login-container {
-    max-height: 600px;
-    max-width: 500px;
-    padding: 40px;
-    margin-left: 100px;
-    border-radius: 12px;
-    background-color: #ffffff;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    border: 3px solid #ff0000;
+  max-height: 600px;
+  max-width: 500px;
+  padding: 40px;
+  margin-left: 100px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  border: 3px solid #1890c8;
 }
 
 h2 {
-    color: #000000;
-    font-size: 36px;
-    font-weight: bold;
-    text-transform: uppercase;
+  color: #000000;
+  font-size: 36px;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding-bottom: 20px;
 }
 
 label {
-    font-weight: bold;
-    color: #000000;
-    font-size: 22px;
-    display: flex;
-    text-align: left;
-    margin-top: 20px;
-    margin-bottom: 10px;
+  font-weight: bold;
+  color: #000000;
+  font-size: 22px;
+  display: flex;
+  text-align: left;
+  margin: 15px 0;
 }
 
 .input-field {
-    width: 100%;
-    padding: 12px;
-    margin-top: 5px;
-    margin-bottom: 12px;
-    border: 2px solid #000000;
-    border-radius: 6px;
-    outline: none;
-    font-size: 18px;
-    transition: all 0.3s ease-in-out;
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  margin-bottom: 12px;
+  border: 2px solid #787878;
+  border-radius: 6px;
+  outline: none;
+  font-size: 18px;
 }
 
 .input-field:focus {
-    border-color: #ff0000;
-    background-color: #f8f8f8;
+  border-color: #000000;
 }
 
 .btn-registrar {
-    width: 100%;
-    padding: 12px;
-    background-color: #000000;
-    color: #ffffff;
-    font-size: 20px;
-    font-weight: bold;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.3s;
-    margin-top: 18px;
+  width: 100%;
+  padding: 12px;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: 18px;
 }
 
 .btn-registrar:hover {
-    background-color: #ff0000;
-    color: white;
+  background-color: #1890c8;
+}
+
+p {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
 }
 
 #regis {
-    display: inline-flex;
-    text-align: left;
-    font-size: 18px;
-    text-decoration: none;
-    color: #000000;
-    font-weight: bold;
-    margin-top: 8px; /* Ajuste opcional para separarlo de otros elementos */
-    margin-bottom: 8px;
+  text-decoration: none;
+  color: #000000;
 }
 
 #regis:hover {
-    text-decoration: underline;
-    color: #ff0000;
+  text-decoration: underline;
+  color: #1890c8;
 }
