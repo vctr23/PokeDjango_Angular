@@ -4,20 +4,29 @@
   grid-template-columns: repeat(5, 1fr);
   gap: 2rem;
   padding: 2rem 10rem;
+  justify-content: center;
 }
+
 .card {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.2s ease-in-out;
 }
+
+.card:hover {
+  transform: scale(1.05); /* Efecto de crecimiento en hover */
+}
+
 .card img {
   width: 80%;
-  height: 100%;
+  height: auto;
+  object-fit: cover; /* Ajusta la imagen sin deformarla */
+  border-radius: 8px; /* Esquinas redondeadas (opcional) */
 }
 
 @media (max-width: 1024px) {
   .container_cards {
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
   }
@@ -25,14 +34,13 @@
 
 @media (max-width: 768px) {
   .container_cards {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
   }
 }
+
 @media (max-width: 468px) {
   .container_cards {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }

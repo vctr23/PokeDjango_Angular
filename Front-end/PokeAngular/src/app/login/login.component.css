@@ -1,27 +1,16 @@
 #cuerpo {
-<<<<<<< HEAD
-    background-image: url("../../../public/images/wpEevee.webp");
-    background-size: cover;
-    background-attachment: fixed;
-    /* aspect-ratio: 16/9; */
-    padding: 165px;
-=======
     background-image: url("../../../public/images/eevee.webp");
     background-size: cover;
     background-attachment: fixed;
     /* aspect-ratio: 16/9; */
     padding: 155px;
->>>>>>> 9d38d1ec47a71bf624b05b2e4b0b309b7a4e62bf
 }
 
 .login-container {
     max-height: 600px;
     max-width: 500px;
     padding: 40px;
-<<<<<<< HEAD
-=======
     margin-left: 100px;
->>>>>>> 9d38d1ec47a71bf624b05b2e4b0b309b7a4e62bf
     border-radius: 12px;
     background-color: #ffffff;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);

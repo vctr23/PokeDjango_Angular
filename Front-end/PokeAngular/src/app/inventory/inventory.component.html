@@ -1,32 +1,5 @@
 <div class="container_cards">
-  <div class="card">
-    <img src="images/pack1.png" alt="" />
-  </div>
-  <div class="card">
-    <img src="images/pack1.png" alt="" />
-  </div>
-  <div class="card">
-    <img src="images/pack1.png" alt="" />
-  </div>
-  <div class="card">
-    <img src="images/pack1.png" alt="" />
-  </div>
-  <div class="card">
-    <img src="images/pack1.png" alt="" />
-  </div>
-  <div class="card">
-    <img src="images/pack1.png" alt="" />
-  </div>
-  <div class="card">
-    <img src="images/pack1.png" alt="" />
-  </div>
-  <div class="card">
-    <img src="images/pack1.png" alt="" />
-  </div>
-  <div class="card">
-    <img src="images/pack1.png" alt="" />
-  </div>
-  <div class="card">
-    <img src="images/pack1.png" alt="" />
+  <div class="card" *ngFor="let card of cards">
+    <img [src]="card.imageUrl" alt="Carta de Set 1" />
   </div>
 </div>
