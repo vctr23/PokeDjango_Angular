@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+}
+
+.body {
+  background-image: url("../../../public/images/banner-pokemon.jpg");
+  background-size: cover;
+  margin: 0;
+}
+
+#sobres {
+  display: flex;
+  width: 100%;
+  margin: 0;
+}
+
+.logo-container {
+  /* Esto asegura que los elementos se apilen verticalmente */
+  display: flex;
+  flex-direction: column;
+  /* Centra las imágenes horizontalmente */
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.expansion-logo {
+  max-height: auto;
+  /* Ajusta el tamaño máximo del logo */
+  max-width: 200px;
+  margin-top: 28px;
+  height: auto;
+  /* Espacio entre el logo y el sobre */
+  margin-bottom: 23px;
+}
+
+.booster-pack-image {
+  height: auto;
+  /* Ajusta el tamaño máximo del sobre */
+  max-width: 200px;
+  height: auto;
+  transition: 0.5s;
+  margin-bottom: 28px;
+}
+
+.booster-pack-image:hover {
+  /* Aumenta el tamaño de la imagen al pasar el cursor */
+  transform: scale(1.05);
+  transition: 0.5s;
+  cursor: pointer;
+}

@@ -1,0 +1,76 @@
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+.carousel-slide {
+  background-image: url("../../../public/images/banner-pokemon.jpg");
+  background-size: cover;
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 20px;
+}
+.carousel-slide img {
+  box-shadow: 10px 10px 20px black, -10px -10px 20px black;
+  width: 16%;
+}
+.carousel-slide a {
+  color: #fefefe;
+  text-decoration: none;
+  padding: 15px 20px;
+  background-color: #1890c8;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: 900;
+  transform: skew(-12deg);
+  box-shadow: 5px 5px 20px black, -5px -5px 20px black;
+  border-bottom: 5px solid #0f5372;
+  transition: 0.2s ease-out57;
+}
+.carousel-slide a:hover {
+  background-color: #0f5372;
+  border-bottom: none;
+}
+.prev,
+.next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #000;
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  cursor: pointer;
+  font-size: 20px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+/* Animacion de los botones para cambiar de sobre */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.prev {
+  left: 60px;
+}
+.next {
+  right: 60px;
+}
+button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}

@@ -1,0 +1,68 @@
+body {
+  overflow-x: hidden;
+}
+
+/* Estilo para el Header y Navbar */
+header {
+  background: #000000; /* Fondo negro */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 1rem;
+  gap: 10px;
+}
+
+/* Imagen de la Poké Ball a la izquierda */
+.pokeball-icon {
+  border-radius: 100%;
+  width: 52px;
+  height: 52px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pokeball-icon:hover {
+  transform: rotate(20deg) scale(1.1);
+}
+
+/* Enlaces de navegación */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding-left: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff; /* Letras blancas */
+  font-size: 22px;
+  padding: 5px 10px;
+  transition: 0.1s ease-in-out;
+}
+
+.nav-links a:hover {
+  border-bottom: 2px solid #ffffff;
+}
+/* Icono de Log-in a la derecha */
+.login-icon {
+  fill: #ffffff;
+  height: 32px;
+  width: auto;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-icon:hover {
+  transform: scale(1.2);
+}
