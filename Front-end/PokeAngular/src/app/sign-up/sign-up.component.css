@@ -98,3 +98,18 @@
     color: white;
   }
   
+  #regis {
+    display: inline-flex;
+    text-align: left;
+    font-size: 18px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    margin-top: 8px; /* Ajuste opcional para separarlo de otros elementos */
+    margin-bottom: 8px;
+}
+
+#regis:hover {
+    text-decoration: underline;
+    color: #ff0000;
+}
