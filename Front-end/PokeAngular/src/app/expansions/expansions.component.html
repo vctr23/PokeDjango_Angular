@@ -1,5 +1,5 @@
-<div *ngFor="let card of cards">
-  <div class="card">
+<div class="container_cards">
+  <div *ngFor="let card of cards" class="card">
     <h3>{{ card.name }} - #{{ card.number }}</h3>
     <img [src]="card.image" alt="{{ card.name }}" />
   </div>

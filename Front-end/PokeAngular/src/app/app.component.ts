@@ -5,6 +5,7 @@ import { FooterAngularComponent } from './footer-angular/footer-angular.componen
 import { CarouselComponent } from './carousel/carousel.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { InventoryComponent } from './inventory/inventory.component';
+import { ExpansionsComponent } from './expansions/expansions.component';
 import { LoginComponent } from './login/login.component';
 
 @Component({
@@ -17,6 +18,7 @@ import { LoginComponent } from './login/login.component';
     LoginComponent,
     SignUpComponent,
     InventoryComponent,
+    ExpansionsComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
