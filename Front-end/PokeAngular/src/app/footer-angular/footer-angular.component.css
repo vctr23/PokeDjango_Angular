@@ -5,6 +5,7 @@ footer {
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   padding: 2rem;
+  margin-top: -15px;
 }
 
 .container_svg p{
