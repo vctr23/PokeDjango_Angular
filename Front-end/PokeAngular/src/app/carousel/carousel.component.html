@@ -1,7 +1,7 @@
 <div class="carousel_container">
   <div class="carousel-slide">
     <img [src]="images[currentIndex]" alt="Imagen del carrusel" />
-    <a href="http://localhost:4200/packopened">Abrir Sobre</a>
+    <a [routerLink]="['/packopened', getImageNumber(images[currentIndex]) ]">Abrir Sobre</a>
   </div>
   <button class="prev" (click)="prevSlide()">❮</button>
   <button class="next" (click)="nextSlide()">❯</button>
