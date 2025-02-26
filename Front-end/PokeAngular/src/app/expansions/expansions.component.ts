@@ -16,9 +16,24 @@ import { FormsModule } from '@angular/forms';
 export class ExpansionsComponent implements OnInit {
   cards: any[] = [];
   searchName: string = '';
-  searchNumber: string = '';
-
+  selectedOption: string = '';
   constructor(private service: ServiceService) {}
+  
+  onSelectChange(event: Event): void {
+    const target = event.target as HTMLSelectElement;
+    this.selectedOption = target.value; 
+  
+    this.service.getCardsSets(this.selectedOption).subscribe(
+      (data) => {
+        console.log('Cartas obtenidas:', data);
+        this.cards = data;
+      },
+      (error) => {
+        console.error('Error al obtener las cartas:', error);
+      }
+    );
+  }
+
 
   ngOnInit(): void {
     this.service.getCardsSet1().subscribe(
@@ -34,10 +49,7 @@ export class ExpansionsComponent implements OnInit {
   get filteredCards() {
     return this.cards.filter(
       (card) =>
-        card.name.toLowerCase().includes(this.searchName.toLowerCase()) ||
-        (this.searchNumber !== null &&
-          this.searchNumber !== '' &&
-          card.number === Number(this.searchNumber))
+        card.name.toLowerCase().includes(this.searchName.toLowerCase()) 
     );
   }
 }
