@@ -7,6 +7,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { ExpansionsComponent } from './expansions/expansions.component';
 import { LoginComponent } from './login/login.component';
+import { PackopenedComponent } from './packopened/packopened.component';
 
 @Component({
   selector: 'app-root',
@@ -19,6 +20,7 @@ import { LoginComponent } from './login/login.component';
     SignUpComponent,
     InventoryComponent,
     ExpansionsComponent,
+    PackopenedComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

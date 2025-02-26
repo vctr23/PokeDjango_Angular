@@ -1,0 +1,9 @@
+<div class="container_pack">
+    <div class="card_pack" *ngFor="let card of randomCards">
+        <div class="card" [class.flipped]="card.flipped">
+            <img class="front" [src]="card.image" alt="{{ card.name }}">
+            <img class="back" [src]="cardReversePath" alt="Card Reverse">
+        </div>
+        <h3 *ngIf="card.flipped">{{ card.name }}</h3> <!-- Solo mostrar nombre cuando gire -->
+    </div>
+</div>

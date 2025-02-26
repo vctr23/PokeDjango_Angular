@@ -9,6 +9,7 @@ class PokemonSet2(models.Model):
     number = models.CharField(max_length=100)
     rarity = models.CharField(max_length=100)
     image = models.URLField(max_length=300)  # Campo para la URL de la imagen
-    
+    types = models.JSONField(default=list) 
+
     def __str__(self):
         return self.name
