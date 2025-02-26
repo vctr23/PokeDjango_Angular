@@ -1,6 +1,24 @@
-<div class="container_cards">
-  <div *ngFor="let card of cards" class="card">
-    <h3>{{ card.name }} - #{{ card.number }}</h3>
-    <img [src]="card.image" alt="{{ card.name }}" />
+<main>
+  <div class="container_filters">
+    <input
+      type="text"
+      placeholder="Nombre del pokemon"
+      [(ngModel)]="searchName"
+    />
+    <input
+      type="number"
+      placeholder="Numero del pokemon"
+      [(ngModel)]="searchNumber"
+      min="1"
+    />
   </div>
-</div>
+  <div class="container_cards">
+    <div *ngFor="let card of filteredCards" class="card">
+      <div class="header_cards">
+        <span>{{ card.name }}</span>
+        <span>#{{ card.number }}</span>
+      </div>
+      <img [src]="card.image" alt="{{ card.name }}" />
+    </div>
+  </div>
+</main>

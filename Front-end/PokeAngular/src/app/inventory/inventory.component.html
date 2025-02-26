@@ -1,6 +1,7 @@
-<div *ngFor="let card of cards">
-  <div class="card">
-    <h3>{{ card.name }} - #{{ card.number }}</h3>
+<div class="container_cards">
+  <div *ngFor="let card of cards" class="card">
+    <h3>{{ card.name }}</h3>
     <img [src]="card.image" alt="{{ card.name }}" />
+    <p>{{ card.rarity }} - #{{ card.number }}</p>
   </div>
 </div>
