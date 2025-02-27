@@ -10,7 +10,6 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [CommonModule, HttpClientModule],
   templateUrl: './packopened.component.html',
   styleUrls: ['./packopened.component.css'],
-  providers: [ServiceService]
 })
 export class PackopenedComponent implements OnInit {
   allCards: any[] = [];
@@ -89,6 +88,11 @@ export class PackopenedComponent implements OnInit {
         card.name = card.original.name;
         card.flipped = true;
         this.cdRef.detectChanges();
+  
+        // ✅ Agregar cartas al servicio cuando se terminan de mostrar
+        if (index === this.randomCards.length - 1) {
+          this.service.addCardsToInventory(this.randomCards.map(c => c.original));
+        }
       }, (index + 1) * 500);
     });
   }
