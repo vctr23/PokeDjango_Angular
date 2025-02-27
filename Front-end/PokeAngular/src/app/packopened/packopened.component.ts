@@ -108,4 +108,14 @@ export class PackopenedComponent implements OnInit {
     });
   }
 
+  openNewPack(): void {
+    this.isLoading = true;
+    this.randomCards = []; // Vaciar las cartas antes de la nueva apertura
+    this.cdRef.detectChanges(); // Refrescar la vista
+    
+    setTimeout(() => {
+      this.selectRandomCards();
+    }, 500);
+  }
+
 }

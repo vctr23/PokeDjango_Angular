@@ -6,6 +6,12 @@
         </div>
     </div>
 </div>
+
+<!-- Botón para abrir otro sobre -->
+<div class="button-container">
+    <button class="open-pack-btn" (click)="openNewPack()">Abrir otro sobre</button>
+</div>
+
 <section *ngIf="isLoading" class="loader">
     <div class="dot"></div>
     <div class="dot"></div>

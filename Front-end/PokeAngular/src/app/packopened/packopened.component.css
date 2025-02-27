@@ -161,6 +161,30 @@
   backface-visibility: hidden; /* 🔥 Oculta la imagen trasera cuando no está activa */
   border-radius: 8px; /* 🔥 Bordes redondeados */
 }
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  background-color: grey;
+}
+
+/* Botón "Abrir otro sobre" */
+.open-pack-btn {
+  background-color: #ffcc00;
+  color: black;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.open-pack-btn:hover {
+  background-color: #ff9900;
+}
+
 @keyframes rotate4 {
   100% {
     transform: rotate(360deg);
