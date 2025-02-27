@@ -163,27 +163,31 @@
 }
 
 .button-container {
+  padding: 50px;
   display: flex;
   justify-content: center;
-  margin-top: 20px;
   background-color: grey;
 }
 
 /* Botón "Abrir otro sobre" */
 .open-pack-btn {
-  background-color: #ffcc00;
-  color: black;
-  font-size: 1.2rem;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease-in-out;
+  color: #fefefe;
+  text-decoration: none;
+  padding: 15px 20px;
+  background-color: #1890c8;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: 900;
+  transform: skew(-12deg);
+  box-shadow: 5px 5px 20px black, -5px -5px 20px black;
+  border-bottom: 5px solid #0f5372;
+  transition: 0.2s ease-out57;
+}
+.open-pack-btn:hover{
+  background-color: #0f5372;
+  border-bottom: none;
 }
 
-.open-pack-btn:hover {
-  background-color: #ff9900;
-}
 
 @keyframes rotate4 {
   100% {
