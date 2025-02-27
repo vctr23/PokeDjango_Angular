@@ -18,6 +18,8 @@ export class PackopenedComponent implements OnInit {
   cardReversePath: string = 'images/cardReverse.png'; // Ruta de la imagen de dorso
   packNumber: number = 1; // Número del pack
 
+  isLoading:boolean = true;
+
   constructor(
     private service: ServiceService,
     private cdRef: ChangeDetectorRef,
@@ -25,11 +27,13 @@ export class PackopenedComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.isLoading = true
     // ✅ Obtiene el número del sobre desde la URL
     this.route.paramMap.subscribe(params => {
       this.packNumber = Number(params.get('packNumber')) || 1;
       this.loadPackCards();
     });
+    
   }
 
   loadPackCards(): void {
@@ -66,6 +70,7 @@ export class PackopenedComponent implements OnInit {
   }
 
   selectRandomCards(): void {
+    this.isLoading = true;
     if (this.allCards.length >= 10) {
       const selectedCards = this.allCards
         .sort(() => Math.random() - 0.5)
@@ -77,6 +82,12 @@ export class PackopenedComponent implements OnInit {
         name: '',
         flipped: false
       }));
+
+      this.cdRef.detectChanges();
+      setTimeout(() => {
+        this.isLoading = false;
+        this.cdRef.detectChanges();
+      }, 500);
 
       setTimeout(() => this.revealCardsInOrder(), 500);
     }
@@ -92,4 +103,5 @@ export class PackopenedComponent implements OnInit {
       }, (index + 1) * 500);
     });
   }
+
 }

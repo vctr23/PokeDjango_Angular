@@ -4,6 +4,7 @@ main {
   flex-direction: column;
   gap: 1rem;
   padding: 2rem;
+  min-height: 80vh;
 }
 .container_filters {
   display: flex;
@@ -15,6 +16,16 @@ input {
   outline: none;
   border-radius: 5px;
   border: 2px solid #474747;
+}
+
+select {
+  border-radius: 5px;
+  border: 2px solid #474747;
+  width: 20%;
+  outline: none;
+}
+select option:hover{
+  background-color: red;
 }
 .container_cards {
   display: grid;
