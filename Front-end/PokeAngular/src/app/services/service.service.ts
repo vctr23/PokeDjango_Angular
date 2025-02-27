@@ -30,4 +30,12 @@ export class ServiceService {
   getCardsSet5(): Observable<any> {
     return this.http.get<any>(`${this.baseUrl}apiSet5/set5/`);
   }
+
+  // getUsers(): Observable<any> {
+  //   return this.http.get<any>(`${this.baseUrl}apiUsers/`);
+  // }
+
+  register_users(datos: any): Observable<any> {
+    return this.http.post(`${this.baseUrl}apiUsers/register/`, datos);
+  }
 }
