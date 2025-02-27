@@ -45,7 +45,7 @@ export class ServiceService {
   getInventoryCards(): any[] {
     return this.inventoryCards.getValue();
   
-  }  // ✅ Devuelve la lista actual de cartas
+  }  // Devuelve la lista actual de cartas
   
   // getUsers(): Observable<any> {
   //   return this.http.get<any>(`${this.baseUrl}apiUsers/`);
@@ -53,5 +53,9 @@ export class ServiceService {
 
   register_users(datos: any): Observable<any> {
     return this.http.post(`${this.baseUrl}apiUsers/register/`, datos);
+  }
+
+  login(email: string, password: string): Observable<any> {
+    return this.http.post(`${this.baseUrl}apiUsers/login/`, { email, password }, { withCredentials: true });
   }
 }
