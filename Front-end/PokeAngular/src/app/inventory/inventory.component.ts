@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ServiceService } from '../services/service.service'; // Asegúrate de que la ruta es correcta
+import { ServiceService } from '../services/service.service';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -8,22 +8,21 @@ import { HttpClientModule } from '@angular/common/http';
   standalone: true,
   imports: [CommonModule, HttpClientModule],
   templateUrl: './inventory.component.html',
-  styleUrls: ['./inventory.component.css'],
-  providers: [ServiceService] // Agrega el servicio aquí si es standalone
+  styleUrls: ['./inventory.component.css']
 })
 export class InventoryComponent implements OnInit {
-
-  cards: any[] = []; // Array para almacenar las cartas
+  cards: any[] = [];
 
   constructor(private service: ServiceService) {}
 
   ngOnInit(): void {
-    this.service.getCardsSet1().subscribe(data => {
-      console.log(data); // Asegúrate de que se reciben los datos correctamente
-      this.cards = data; // Asigna los datos a "cards"
-    }, error => {
-      console.error('Error al obtener las cartas:', error);
+    this.service.inventory$.subscribe(cartas => {
+      this.cards = [...cartas]; // ✅ Se actualiza cuando hay nuevas cartas
+      this.sortInventory();
     });
   }
 
+  sortInventory(): void {
+    this.cards.sort((a, b) => a.number - b.number);
+  }
 }

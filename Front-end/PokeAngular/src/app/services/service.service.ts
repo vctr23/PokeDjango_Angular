@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
 @Injectable({
@@ -8,6 +8,8 @@ import { tap } from 'rxjs/operators';
 })
 export class ServiceService {
   private baseUrl = 'http://localhost:8000/';
+  private inventoryCards = new BehaviorSubject<any[]>([]);
+  inventory$ = this.inventoryCards.asObservable(); // ✅ Observable para el inventario
 
   constructor(private http: HttpClient) {}
 
@@ -33,5 +35,23 @@ export class ServiceService {
 
   getCardsSet5(): Observable<any> {
     return this.http.get<any>(`${this.baseUrl}apiSet5/set5/`);
+  }
+
+  addCardsToInventory(cards: any[]): void {
+    const currentInventory = this.inventoryCards.getValue();
+    this.inventoryCards.next([...currentInventory, ...cards]); // ✅ Se mantienen las cartas anteriores
+  }
+
+  getInventoryCards(): any[] {
+    return this.inventoryCards.getValue();
+  
+  }  // ✅ Devuelve la lista actual de cartas
+  
+  // getUsers(): Observable<any> {
+  //   return this.http.get<any>(`${this.baseUrl}apiUsers/`);
+  // }
+
+  register_users(datos: any): Observable<any> {
+    return this.http.post(`${this.baseUrl}apiUsers/register/`, datos);
   }
 }

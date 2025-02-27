@@ -36,7 +36,7 @@ class PokemonSet2View(APIView):
                         number=number,
                         rarity=rarity,
                         image=image,
-                        types=types,
+                        types=first_type,
                     )
                     sets_creados.append(nuevo_set)
 
