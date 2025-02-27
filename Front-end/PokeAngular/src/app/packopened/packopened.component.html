@@ -4,11 +4,12 @@
             <img class="front" [src]="card.image" alt="{{ card.name }}">
             <img class="back" [src]="cardReversePath" alt="Card Reverse">
         </div>
-        <h3 *ngIf="card.flipped">{{ card.name }}</h3> <!-- Solo mostrar nombre cuando gire -->
     </div>
 </div>
-<div *ngIf="isLoading" class="loader">
-    <svg viewBox="25 25 50 50">
-        <circle r="20" cy="50" cx="50"></circle>
-    </svg>
-</div>
+<section *ngIf="isLoading" class="loader">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+</section>

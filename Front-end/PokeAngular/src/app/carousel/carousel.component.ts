@@ -55,4 +55,6 @@ export class CarouselComponent {
       return null; // Si la imagen no está en la lista
     }
   }
+
+  
 }
