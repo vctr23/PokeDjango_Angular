@@ -9,8 +9,8 @@ import { tap } from 'rxjs/operators';
 export class ServiceService {
   private baseUrl = 'http://localhost:8000/';
   private inventoryCards = new BehaviorSubject<any[]>([]);
-  inventory$ = this.inventoryCards.asObservable(); // ✅ Observable para el inventario
-
+  inventory$ = this.inventoryCards.asObservable(); // Observable para el inventario
+  
   constructor(private http: HttpClient) {}
 
   getCardsSets(set: String): Observable<any> {
@@ -39,7 +39,7 @@ export class ServiceService {
 
   addCardsToInventory(cards: any[]): void {
     const currentInventory = this.inventoryCards.getValue();
-    this.inventoryCards.next([...currentInventory, ...cards]); // ✅ Se mantienen las cartas anteriores
+    this.inventoryCards.next([...currentInventory, ...cards]); // Se mantienen las cartas anteriores
   }
 
   getInventoryCards(): any[] {
