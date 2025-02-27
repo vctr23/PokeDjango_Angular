@@ -23,7 +23,8 @@ class PokemonSet3View(APIView):
                 number = set_data.get("number")
                 rarity = set_data.get("rarity")
                 image = set_data.get("images", {}).get("small")
-                types = set_data.get("types", [])  # 🔥 Captura los tipos, si no hay, usa lista vacía
+                types_list = set_data.get("types", [])
+                first_type = types_list[0] if types_list else "Sin tipo"
 
                 # Asegurarse de que no existe antes de crear el set
                 if not PokemonSet3.objects.filter(id=id_set).exists():
@@ -34,7 +35,7 @@ class PokemonSet3View(APIView):
                         number=number,
                         rarity=rarity,
                         image=image,
-                        types=types,
+                        types=first_type,
                     )
                     sets_creados.append(nuevo_set)
 

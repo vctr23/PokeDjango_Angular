@@ -12,5 +12,5 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignUpComponent },
   { path: 'expansions', component: ExpansionsComponent },
-  { path: 'packopened', component: PackopenedComponent},
+  { path: 'packopened/:packNumber', component: PackopenedComponent }
 ];

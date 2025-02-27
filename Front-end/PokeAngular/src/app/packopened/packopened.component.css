@@ -14,6 +14,7 @@
   /* Carta individual */
   .card_pack {
     display: flex;
+    padding: 20px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -26,8 +27,8 @@
   
   /* Contenedor de la carta con animación de giro */
   .card {
-    width: 300px; /* 🔥 Manteniendo el tamaño original */
-    height: 420px; /* 🔥 Proporción adecuada */
+    width: 260px; /* 🔥 Manteniendo el tamaño original */
+    height: 370px; /* 🔥 Proporción adecuada */
     position: relative;
     transform-style: preserve-3d;
     transition: transform 0.6s ease-in-out;
@@ -45,7 +46,7 @@
     object-fit: cover; /* 🔥 Asegura que la imagen se vea completa */
     position: absolute;
     backface-visibility: hidden; /* 🔥 Oculta la imagen trasera cuando no está activa */
-    border-radius: 12px; /* 🔥 Bordes redondeados */
+    border-radius: 8px; /* 🔥 Bordes redondeados */
   }
   
   /* Imagen frontal (la carta real) */
@@ -59,9 +60,7 @@
   }
   
   /* Efecto hover (opcional) */
-  .card_pack:hover {
-    transform: scale(1.05);
-  }
+  
   
   /* Estilo del nombre de la carta */
   .card_pack h3 {

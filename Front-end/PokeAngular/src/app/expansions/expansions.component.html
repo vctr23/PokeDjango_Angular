@@ -1,16 +1,24 @@
 <main>
   <div class="container_filters">
+    <select [(ngModel)]="selectedOption" (change)="onSelectChange($event)">
+      <option value="">Seleccione una expansión</option>
+      <option value="1">Scarlet & Violet 151</option>
+      <option value="2">Sword & Shield Lost Origin</option>
+      <option value="3">Black & White Legendary Treasures</option>
+      <option value="4">Sun & Moon Cosmic Eclipse</option>
+      <option value="5">Scarlet & Violet Prismatic Evolution</option>
+    </select>
     <input
       type="text"
       placeholder="Nombre del pokemon"
       [(ngModel)]="searchName"
     />
-    <input
-      type="number"
-      placeholder="Numero del pokemon"
-      [(ngModel)]="searchNumber"
-      min="1"
-    />
+    <select [(ngModel)]="selectedOption" (change)="onSelectChange($event)">
+      <option value="">Seleccione un supertipo</option>
+      <option value="1">Pokemón</option>
+      <option value="2">Entrenador</option>
+      <option value="3">Objeto</option>
+    </select>
   </div>
   <div class="container_cards">
     <div *ngFor="let card of filteredCards" class="card">

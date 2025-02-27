@@ -1,15 +1,19 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
+import { tap } from 'rxjs/operators';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ServiceService {
+  private baseUrl = 'http://localhost:8000/';
 
-  private baseUrl = "http://localhost:8000/";
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) { }
+  getCardsSets(set: String): Observable<any> {
+    return this.http.get<any>(`${this.baseUrl}apiSet${set}/set${set}/`);
+  }
 
   getCardsSet1(): Observable<any> {
     return this.http.get<any>(`${this.baseUrl}apiSet1/set1/`);

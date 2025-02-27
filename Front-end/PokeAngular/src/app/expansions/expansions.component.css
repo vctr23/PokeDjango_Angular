@@ -19,7 +19,7 @@ input {
 .container_cards {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 1.5rem;
+  gap: 1rem;
   justify-content: center;
 }
 
@@ -37,7 +37,7 @@ input {
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .card img {
