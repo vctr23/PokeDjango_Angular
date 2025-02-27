@@ -43,6 +43,15 @@ export class ServiceService {
   }
 
   getInventoryCards(): any[] {
-    return this.inventoryCards.getValue(); // ✅ Devuelve la lista actual de cartas
+    return this.inventoryCards.getValue();
+  
+  }  // ✅ Devuelve la lista actual de cartas
+  
+  // getUsers(): Observable<any> {
+  //   return this.http.get<any>(`${this.baseUrl}apiUsers/`);
+  // }
+
+  register_users(datos: any): Observable<any> {
+    return this.http.post(`${this.baseUrl}apiUsers/register/`, datos);
   }
 }
