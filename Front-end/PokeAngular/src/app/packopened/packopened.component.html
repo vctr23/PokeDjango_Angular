@@ -4,6 +4,5 @@
             <img class="front" [src]="card.image" alt="{{ card.name }}">
             <img class="back" [src]="cardReversePath" alt="Card Reverse">
         </div>
-        <h3 *ngIf="card.flipped">{{ card.name }}</h3> <!-- Solo mostrar nombre cuando gire -->
     </div>
 </div>
